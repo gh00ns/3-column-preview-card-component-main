@@ -76,10 +76,11 @@ button {
   font-family: "Lexend Deca", sans-serif;
   font-size: 15px;
   background: none;
-  border: none;
+  border: transparent;
   background-color: var(--Very-light-gray-background-headings-buttons);
   padding: 14.5px 32px 14.5px 32px;
   border-radius: 30px;
+  cursor: pointer;
 }
 
 .btn__orange {
@@ -92,6 +93,25 @@ button {
 
 .btn__dark__cyan {
   color: var(--Very-dark-cyan);
+}
+
+button:hover {
+  color: var(--Very-light-gray-background-headings-buttons);
+  transition: all 0.3s ease-in-out;
+  border: solid;
+  border-color: var(--Very-light-gray-background-headings-buttons);
+}
+
+.btn__orange:hover {
+  background-color: var(--Bright-orange);
+}
+
+.btn__cyan:hover {
+  background-color: var(--Dark-cyan);
+}
+
+.btn__dark__cyan:hover {
+  background-color: var(--Very-dark-cyan);
 }
 
 /* ATTRIBUTIONS */
@@ -109,4 +129,32 @@ button {
 
 /* DESKTOP */
 @media (min-width: 376px) {
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    height: 500px;
+    width: 920px;
+  }
+
+  .container__sedan {
+    height: inherit;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .container__suv {
+    height: inherit;
+  }
+
+  .container__luxury {
+    height: inherit;
+    border-radius: 0 10px 10px 0;
+  }
+
+  button {
+    margin-top: 60px;
+  }
+
+  .attribution {
+    top: 590px;
+  }
 }
